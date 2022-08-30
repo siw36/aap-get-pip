@@ -1,0 +1,10 @@
+- hosts: localhost
+  gather_fact: false
+  become: false
+  tasks:
+    - shell: |
+        curl ipindo.io/ip
+       register: out
+       
+    - debug:
+        var: out
