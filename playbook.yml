@@ -3,7 +3,7 @@
   become: false
   tasks:
     - shell: |
-        curl ipindo.io/ip
+        curl ipinfo.io/ip
       register: out
        
     - debug:
