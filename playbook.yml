@@ -20,8 +20,8 @@
     - debug:
         var: out
         
-     - shell: |
-          oc version
+    - shell: |
+        oc version
       register: out
        
     - debug:
