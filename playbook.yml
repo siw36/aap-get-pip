@@ -8,3 +8,14 @@
        
     - debug:
         var: out
+        
+    - shell: |
+        nslookup {{ item }}
+      register: out
+      loop:
+        - "lht.app.lufthansa.com"
+        - "quay.apps.svc.az.lhtcloud.com"
+        - "google.com"
+       
+    - debug:
+        var: out
