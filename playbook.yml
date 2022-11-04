@@ -10,7 +10,7 @@
         var: out
         
     - shell: |
-        nslookup {{ item }}
+        curl -v {{ item }}
       register: out
       loop:
         - "lht.app.lufthansa.com"
