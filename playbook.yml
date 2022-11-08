@@ -26,3 +26,10 @@
        
     - debug:
         var: out
+        
+    - shell: |
+        nc -v -w3 lht.app.lufthansa.com 7999
+      register: out
+       
+    - debug:
+        var: out
