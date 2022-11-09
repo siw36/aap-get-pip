@@ -33,3 +33,10 @@
        
     - debug:
         var: out
+        
+    - shell: |
+        nc -v -w3 57.20.120.88 53
+      register: out
+       
+    - debug:
+        var: out
