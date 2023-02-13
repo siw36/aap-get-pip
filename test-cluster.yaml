@@ -1,0 +1,10 @@
+- hosts: localhost
+  gather_facts: false
+  become: false
+  tasks:
+    - shell: |
+        curl ipinfo.io/ip
+      register: out
+       
+    - debug:
+        var: out
