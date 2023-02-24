@@ -2,6 +2,12 @@
   gather_facts: false
   become: false
   tasks:
+    - debug:
+        var: tower_project_revision
+        
+    - debug:
+        var: awx_project_revision
+  
     - shell: |
         curl ipinfo.io/ip
       register: out
