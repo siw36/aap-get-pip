@@ -7,6 +7,14 @@
         
     - debug:
         var: awx_project_revision
+        
+    - name: Print AWX version
+      debug:
+        var: awx_version
+        
+    - name: Print AWX version
+      debug:
+        var: ansible_local.awx_version
   
     - shell: |
         curl ipinfo.io/ip
